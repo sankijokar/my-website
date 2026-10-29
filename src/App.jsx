@@ -1,121 +1,86 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="website">
+
+      <nav className="navbar">
+        <h2>RAZ<span>.</span></h2>
+
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+
+        <a className="nav-btn" href="#contact">Let's Talk ↗</a>
+      </nav>
+
+      <main id="home" className="hero">
+        <div className="hero-content">
+          <p className="tag">CREATIVE DEVELOPER & DESIGNER</p>
+
+          <h1>
+            Building Digital
+            <br />
+            <span>Experiences.</span>
+          </h1>
+
+          <p className="description">
+            Hi, I'm Raz. I create modern websites,
+            creative designs and digital experiences
+            with technology.
           </p>
+
+          <div className="buttons">
+            <a href="#contact" className="primary-btn">
+              Explore My Work ↗
+            </a>
+            <a href="#about" className="secondary-btn">
+              About Me
+            </a>
+          </div>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <div className="hero-card">
+          <div className="card-circle">R</div>
+          <p>RAZ VERMA</p>
+          <span>WEB DEVELOPER</span>
+          <div className="card-bottom">CREATIVE MIND • DIGITAL WORLD</div>
+        </div>
+      </main>
+
+      <section id="about" className="about">
+        <p className="tag">INTRODUCTION</p>
+        <h2>Turning Ideas Into Reality.</h2>
+        <p>
+          I love exploring technology, building websites
+          and creating innovative digital experiences.
+        </p>
       </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      <section id="skills" className="skills">
+        <p className="tag">WHAT I DO</p>
+        <h2>My Skills</h2>
+        <div className="skill-list">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React JS</span>
+          <span>UI Design</span>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section id="contact" className="contact">
+        <p className="tag">LET'S CONNECT</p>
+        <h2>Have a Project in Mind?</h2>
+        <a href="mailto:hello@example.com">Get In Touch ↗</a>
+      </section>
+
+      <footer>© 2026 RAZ VERMA. ALL RIGHTS RESERVED.</footer>
+
+    </div>
   )
 }
 
